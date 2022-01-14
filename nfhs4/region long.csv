@@ -10,6 +10,7 @@ v025,state,id,variable,mean
 1,andaman and nicobar islands,S14,nfhs4s_urban,89.0362718040318
 1,andaman and nicobar islands,S16,nfhs4s_urban,57.34384156702292
 1,andaman and nicobar islands,S20,nfhs4s_urban,19.761097003048338
+1,andaman and nicobar islands,S20_rev,nfhs4s_urban,80.23890299695165
 1,andaman and nicobar islands,S128,nfhs4s_urban,15.341169374526828
 1,andaman and nicobar islands,S130,nfhs4s_urban,1.1761909334585885
 1,andaman and nicobar islands,S15,nfhs4s_urban,95.01358952966407
@@ -46,6 +47,7 @@ v025,state,id,variable,mean
 1,andhra pradesh,S14,nfhs4s_urban,74.93959226198726
 1,andhra pradesh,S16,nfhs4s_urban,47.05345875637497
 1,andhra pradesh,S20,nfhs4s_urban,24.473357054492332
+1,andhra pradesh,S20_rev,nfhs4s_urban,75.52664294550767
 1,andhra pradesh,S128,nfhs4s_urban,0.9782190979557419
 1,andhra pradesh,S130,nfhs4s_urban,0.04888979510640191
 1,andhra pradesh,S15,nfhs4s_urban,88.8006266192426
@@ -82,6 +84,7 @@ v025,state,id,variable,mean
 1,arunachal pradesh,S14,nfhs4s_urban,80.84611783928436
 1,arunachal pradesh,S16,nfhs4s_urban,51.137665335418006
 1,arunachal pradesh,S20,nfhs4s_urban,18.289749261316732
+1,arunachal pradesh,S20_rev,nfhs4s_urban,81.71025073868327
 1,arunachal pradesh,S128,nfhs4s_urban,15.266501348390552
 1,arunachal pradesh,S130,nfhs4s_urban,22.2739881637543
 1,arunachal pradesh,S15,nfhs4s_urban,90.79843473750543
@@ -118,6 +121,7 @@ v025,state,id,variable,mean
 1,assam,S14,nfhs4s_urban,86.9641092923742
 1,assam,S16,nfhs4s_urban,47.385540334576795
 1,assam,S20,nfhs4s_urban,19.164995178643196
+1,assam,S20_rev,nfhs4s_urban,80.83500482135682
 1,assam,S128,nfhs4s_urban,16.55557748761512
 1,assam,S130,nfhs4s_urban,2.856133542828416
 1,assam,S15,nfhs4s_urban,92.72370639384381
@@ -154,6 +158,7 @@ v025,state,id,variable,mean
 1,bihar,S14,nfhs4s_urban,70.62314303140255
 1,bihar,S16,nfhs4s_urban,44.29887347658618
 1,bihar,S20,nfhs4s_urban,26.020400836480395
+1,bihar,S20_rev,nfhs4s_urban,73.97959916351961
 1,bihar,S128,nfhs4s_urban,1.517702355188457
 1,bihar,S130,nfhs4s_urban,0.1643510752236536
 1,bihar,S15,nfhs4s_urban,87.53756122695164
@@ -190,6 +195,7 @@ v025,state,id,variable,mean
 1,chandigarh,S14,nfhs4s_urban,83.95861859747363
 1,chandigarh,S16,nfhs4s_urban,60.34828096505345
 1,chandigarh,S20,nfhs4s_urban,18.81558570164441
+1,chandigarh,S20_rev,nfhs4s_urban,81.18441429835559
 1,chandigarh,S128,nfhs4s_urban,0.42833953752099074
 1,chandigarh,S130,nfhs4s_urban,0.5637665578831091
 1,chandigarh,S15,nfhs4s_urban,89.26972225709729
@@ -226,6 +232,7 @@ v025,state,id,variable,mean
 1,chhattisgarh,S14,nfhs4s_urban,81.58498201260038
 1,chhattisgarh,S16,nfhs4s_urban,46.124633043290494
 1,chhattisgarh,S20,nfhs4s_urban,27.381188798493937
+1,chhattisgarh,S20_rev,nfhs4s_urban,72.61881120150606
 1,chhattisgarh,S128,nfhs4s_urban,13.073474151965755
 1,chhattisgarh,S130,nfhs4s_urban,1.363268365984208
 1,chhattisgarh,S15,nfhs4s_urban,91.76459847495853
@@ -262,6 +269,7 @@ v025,state,id,variable,mean
 1,daman and diu,S14,nfhs4s_urban,83.45966996012893
 1,daman and diu,S16,nfhs4s_urban,54.081477815741174
 1,daman and diu,S20,nfhs4s_urban,34.10048857011015
+1,daman and diu,S20_rev,nfhs4s_urban,65.89951142988984
 1,daman and diu,S128,nfhs4s_urban,1.16825466246622
 1,daman and diu,S130,nfhs4s_urban,0.8281571677731886
 1,daman and diu,S15,nfhs4s_urban,93.10104517498705
@@ -298,6 +306,7 @@ v025,state,id,variable,mean
 1,delhi,S14,nfhs4s_urban,80.88477816393376
 1,delhi,S16,nfhs4s_urban,54.18689473508421
 1,delhi,S20,nfhs4s_urban,29.250096762716737
+1,delhi,S20_rev,nfhs4s_urban,70.74990323728326
 1,delhi,S128,nfhs4s_urban,1.62330025015418
 1,delhi,S130,nfhs4s_urban,0.634089153536342
 1,delhi,S15,nfhs4s_urban,88.86387186244387
@@ -334,6 +343,7 @@ v025,state,id,variable,mean
 1,goa,S14,nfhs4s_urban,87.97198748277887
 1,goa,S16,nfhs4s_urban,58.53071677038375
 1,goa,S20,nfhs4s_urban,14.450285722995243
+1,goa,S20_rev,nfhs4s_urban,85.54971427700477
 1,goa,S128,nfhs4s_urban,1.6935516009268439
 1,goa,S130,nfhs4s_urban,4.1496087647695425
 1,goa,S15,nfhs4s_urban,93.32924248548184
@@ -370,6 +380,7 @@ v025,state,id,variable,mean
 1,gujarat,S14,nfhs4s_urban,83.12422118698579
 1,gujarat,S16,nfhs4s_urban,45.30117201373698
 1,gujarat,S20,nfhs4s_urban,29.71111915902523
+1,gujarat,S20_rev,nfhs4s_urban,70.28888084097477
 1,gujarat,S128,nfhs4s_urban,5.216859904830424
 1,gujarat,S130,nfhs4s_urban,0.1098398484883116
 1,gujarat,S15,nfhs4s_urban,92.79161198320048
@@ -406,6 +417,7 @@ v025,state,id,variable,mean
 1,haryana,S14,nfhs4s_urban,80.33967122393801
 1,haryana,S16,nfhs4s_urban,55.10007472493641
 1,haryana,S20,nfhs4s_urban,34.28635499939484
+1,haryana,S20_rev,nfhs4s_urban,65.71364500060517
 1,haryana,S128,nfhs4s_urban,1.675575213045947
 1,haryana,S130,nfhs4s_urban,0.23626707505368152
 1,haryana,S15,nfhs4s_urban,92.61053046000681
@@ -442,6 +454,7 @@ v025,state,id,variable,mean
 1,himachal pradesh,S14,nfhs4s_urban,92.55698540501965
 1,himachal pradesh,S16,nfhs4s_urban,73.67427605631197
 1,himachal pradesh,S20,nfhs4s_urban,22.083927316700844
+1,himachal pradesh,S20_rev,nfhs4s_urban,77.91607268329915
 1,himachal pradesh,S128,nfhs4s_urban,0.9108737309145573
 1,himachal pradesh,S130,nfhs4s_urban,0.5380137535601239
 1,himachal pradesh,S15,nfhs4s_urban,95.18238194700999
@@ -478,6 +491,7 @@ v025,state,id,variable,mean
 1,jammu and kashmir,S14,nfhs4s_urban,77.49165467401447
 1,jammu and kashmir,S16,nfhs4s_urban,49.39529941765606
 1,jammu and kashmir,S20,nfhs4s_urban,15.15375701881602
+1,jammu and kashmir,S20_rev,nfhs4s_urban,84.84624298118398
 1,jammu and kashmir,S128,nfhs4s_urban,1.5798111347739496
 1,jammu and kashmir,S130,nfhs4s_urban,0.12759080534810438
 1,jammu and kashmir,S15,nfhs4s_urban,86.81969515145089
@@ -514,6 +528,7 @@ v025,state,id,variable,mean
 1,jharkhand,S14,nfhs4s_urban,78.95640590107631
 1,jharkhand,S16,nfhs4s_urban,51.07000417791882
 1,jharkhand,S20,nfhs4s_urban,24.354297663244143
+1,jharkhand,S20_rev,nfhs4s_urban,75.64570233675586
 1,jharkhand,S128,nfhs4s_urban,3.3283611784006366
 1,jharkhand,S130,nfhs4s_urban,0.6347377248240033
 1,jharkhand,S15,nfhs4s_urban,87.96140934309855
@@ -550,6 +565,7 @@ v025,state,id,variable,mean
 1,karnataka,S14,nfhs4s_urban,81.82318206263785
 1,karnataka,S16,nfhs4s_urban,58.87481857929646
 1,karnataka,S20,nfhs4s_urban,27.39369768025594
+1,karnataka,S20_rev,nfhs4s_urban,72.60630231974406
 1,karnataka,S128,nfhs4s_urban,3.091854608638905
 1,karnataka,S130,nfhs4s_urban,1.5885833128096813
 1,karnataka,S15,nfhs4s_urban,89.24399291710937
@@ -586,6 +602,7 @@ v025,state,id,variable,mean
 1,kerala,S14,nfhs4s_urban,98.44248300934328
 1,kerala,S16,nfhs4s_urban,74.08672416958039
 1,kerala,S20,nfhs4s_urban,33.531244449474414
+1,kerala,S20_rev,nfhs4s_urban,66.46875555052559
 1,kerala,S128,nfhs4s_urban,0.14060598692184578
 1,kerala,S130,nfhs4s_urban,2.349649390000949
 1,kerala,S15,nfhs4s_urban,98.3806920320004
@@ -622,6 +639,7 @@ v025,state,id,variable,mean
 1,ladakh,S14,nfhs4s_urban,79.37948472561173
 1,ladakh,S16,nfhs4s_urban,60.20045947346825
 1,ladakh,S20,nfhs4s_urban,22.263850778960776
+1,ladakh,S20_rev,nfhs4s_urban,77.73614922103923
 1,ladakh,S128,nfhs4s_urban,0.14661239552512795
 1,ladakh,S130,nfhs4s_urban,3.1487565600501046
 1,ladakh,S15,nfhs4s_urban,90.18137843510988
@@ -658,6 +676,7 @@ v025,state,id,variable,mean
 1,lakshadweep,S14,nfhs4s_urban,95.66569218530678
 1,lakshadweep,S16,nfhs4s_urban,57.96273753437369
 1,lakshadweep,S20,nfhs4s_urban,33.60982415578761
+1,lakshadweep,S20_rev,nfhs4s_urban,66.3901758442124
 1,lakshadweep,S128,nfhs4s_urban,15.216461753290272
 1,lakshadweep,S130,nfhs4s_urban,0
 1,lakshadweep,S15,nfhs4s_urban,99.28151815805174
@@ -694,6 +713,7 @@ v025,state,id,variable,mean
 1,madhya pradesh,S14,nfhs4s_urban,77.46523099931748
 1,madhya pradesh,S16,nfhs4s_urban,43.578495563701935
 1,madhya pradesh,S20,nfhs4s_urban,30.02168895894894
+1,madhya pradesh,S20_rev,nfhs4s_urban,69.97831104105107
 1,madhya pradesh,S128,nfhs4s_urban,6.450888315394167
 1,madhya pradesh,S130,nfhs4s_urban,0.5515037028680453
 1,madhya pradesh,S15,nfhs4s_urban,88.15915366454692
@@ -730,6 +750,7 @@ v025,state,id,variable,mean
 1,maharashtra,S14,nfhs4s_urban,85.9363964123115
 1,maharashtra,S16,nfhs4s_urban,51.60734400172953
 1,maharashtra,S20,nfhs4s_urban,25.626649724849653
+1,maharashtra,S20_rev,nfhs4s_urban,74.37335027515034
 1,maharashtra,S128,nfhs4s_urban,4.241265922641343
 1,maharashtra,S130,nfhs4s_urban,0.2339692320507558
 1,maharashtra,S15,nfhs4s_urban,93.68350354795642
@@ -766,6 +787,7 @@ v025,state,id,variable,mean
 1,manipur,S14,nfhs4s_urban,89.90766161506028
 1,manipur,S16,nfhs4s_urban,56.96778172528142
 1,manipur,S20,nfhs4s_urban,22.904224503889246
+1,manipur,S20_rev,nfhs4s_urban,77.09577549611075
 1,manipur,S128,nfhs4s_urban,46.032909068091904
 1,manipur,S130,nfhs4s_urban,6.208734888520821
 1,manipur,S15,nfhs4s_urban,97.51362723052522
@@ -802,6 +824,7 @@ v025,state,id,variable,mean
 1,meghalaya,S14,nfhs4s_urban,93.37747406749106
 1,meghalaya,S16,nfhs4s_urban,59.41908384053076
 1,meghalaya,S20,nfhs4s_urban,14.771729430830488
+1,meghalaya,S20_rev,nfhs4s_urban,85.22827056916951
 1,meghalaya,S128,nfhs4s_urban,28.579724565420566
 1,meghalaya,S130,nfhs4s_urban,3.0435485469592445
 1,meghalaya,S15,nfhs4s_urban,94.28466584980117
@@ -838,6 +861,7 @@ v025,state,id,variable,mean
 1,mizoram,S14,nfhs4s_urban,98.57309694129297
 1,mizoram,S16,nfhs4s_urban,51.97063501053365
 1,mizoram,S20,nfhs4s_urban,14.50765705930284
+1,mizoram,S20_rev,nfhs4s_urban,85.49234294069716
 1,mizoram,S128,nfhs4s_urban,59.2139275972356
 1,mizoram,S130,nfhs4s_urban,6.707953244970256
 1,mizoram,S15,nfhs4s_urban,98.52067276564406
@@ -874,6 +898,7 @@ v025,state,id,variable,mean
 1,nagaland,S14,nfhs4s_urban,89.9397781828476
 1,nagaland,S16,nfhs4s_urban,51.088554273164974
 1,nagaland,S20,nfhs4s_urban,13.612935549087462
+1,nagaland,S20_rev,nfhs4s_urban,86.38706445091255
 1,nagaland,S128,nfhs4s_urban,33.06116897278664
 1,nagaland,S130,nfhs4s_urban,4.720512463299007
 1,nagaland,S15,nfhs4s_urban,93.43891476779206
@@ -910,6 +935,7 @@ v025,state,id,variable,mean
 1,odisha,S14,nfhs4s_urban,80.65421485189671
 1,odisha,S16,nfhs4s_urban,43.878161537524875
 1,odisha,S20,nfhs4s_urban,26.375527578524167
+1,odisha,S20_rev,nfhs4s_urban,73.62447242147583
 1,odisha,S128,nfhs4s_urban,10.018163491739777
 1,odisha,S130,nfhs4s_urban,1.2976236514565098
 1,odisha,S15,nfhs4s_urban,92.5619221252462
@@ -946,6 +972,7 @@ v025,state,id,variable,mean
 1,puducherry,S14,nfhs4s_urban,85.06756187979366
 1,puducherry,S16,nfhs4s_urban,61.75153091536417
 1,puducherry,S20,nfhs4s_urban,34.264428145064024
+1,puducherry,S20_rev,nfhs4s_urban,65.73557185493598
 1,puducherry,S128,nfhs4s_urban,0.7950312927182682
 1,puducherry,S130,nfhs4s_urban,0.5393685136949113
 1,puducherry,S15,nfhs4s_urban,87.88341728736752
@@ -982,6 +1009,7 @@ v025,state,id,variable,mean
 1,punjab,S14,nfhs4s_urban,86.10825196300024
 1,punjab,S16,nfhs4s_urban,66.88844579442254
 1,punjab,S20,nfhs4s_urban,25.92905558051471
+1,punjab,S20_rev,nfhs4s_urban,74.07094441948529
 1,punjab,S128,nfhs4s_urban,0.14208601081195682
 1,punjab,S130,nfhs4s_urban,0.10705567506954189
 1,punjab,S15,nfhs4s_urban,90.6391251453512
@@ -1018,6 +1046,7 @@ v025,state,id,variable,mean
 1,rajasthan,S14,nfhs4s_urban,75.75907360227929
 1,rajasthan,S16,nfhs4s_urban,43.07460000565579
 1,rajasthan,S20,nfhs4s_urban,29.24976890324152
+1,rajasthan,S20_rev,nfhs4s_urban,70.75023109675848
 1,rajasthan,S128,nfhs4s_urban,6.346928441987434
 1,rajasthan,S130,nfhs4s_urban,0.10753039356433526
 1,rajasthan,S15,nfhs4s_urban,91.84578858769467
@@ -1054,6 +1083,7 @@ v025,state,id,variable,mean
 1,sikkim,S14,nfhs4s_urban,89.44887621129072
 1,sikkim,S16,nfhs4s_urban,50.23863256423571
 1,sikkim,S20,nfhs4s_urban,19.935358780784675
+1,sikkim,S20_rev,nfhs4s_urban,80.06464121921533
 1,sikkim,S128,nfhs4s_urban,8.220974919685473
 1,sikkim,S130,nfhs4s_urban,22.71080151322461
 1,sikkim,S15,nfhs4s_urban,92.79822629570948
@@ -1090,6 +1120,7 @@ v025,state,id,variable,mean
 1,tamil nadu,S14,nfhs4s_urban,85.60256936575522
 1,tamil nadu,S16,nfhs4s_urban,58.58611438582475
 1,tamil nadu,S20,nfhs4s_urban,30.86935528836624
+1,tamil nadu,S20_rev,nfhs4s_urban,69.13064471163376
 1,tamil nadu,S128,nfhs4s_urban,1.452210752432963
 1,tamil nadu,S130,nfhs4s_urban,0.4840386303807601
 1,tamil nadu,S15,nfhs4s_urban,90.5581223991629
@@ -1126,6 +1157,7 @@ v025,state,id,variable,mean
 1,telangana,S14,nfhs4s_urban,79.13747359602206
 1,telangana,S16,nfhs4s_urban,57.177429502260956
 1,telangana,S20,nfhs4s_urban,30.175614358028973
+1,telangana,S20_rev,nfhs4s_urban,69.82438564197102
 1,telangana,S128,nfhs4s_urban,1.1216446578454486
 1,telangana,S130,nfhs4s_urban,2.7297601289081364
 1,telangana,S15,nfhs4s_urban,88.80081281520988
@@ -1162,6 +1194,7 @@ v025,state,id,variable,mean
 1,tripura,S14,nfhs4s_urban,88.36767618968705
 1,tripura,S16,nfhs4s_urban,39.75261602848097
 1,tripura,S20,nfhs4s_urban,23.078092201838537
+1,tripura,S20_rev,nfhs4s_urban,76.92190779816146
 1,tripura,S128,nfhs4s_urban,37.89751707178173
 1,tripura,S130,nfhs4s_urban,0.4159504909910325
 1,tripura,S15,nfhs4s_urban,94.75005453813655
@@ -1198,6 +1231,7 @@ v025,state,id,variable,mean
 1,uttar pradesh,S14,nfhs4s_urban,74.6178499211879
 1,uttar pradesh,S16,nfhs4s_urban,48.14629823316135
 1,uttar pradesh,S20,nfhs4s_urban,26.89501965816084
+1,uttar pradesh,S20_rev,nfhs4s_urban,73.10498034183915
 1,uttar pradesh,S128,nfhs4s_urban,5.847704972335659
 1,uttar pradesh,S130,nfhs4s_urban,0.08700589527572611
 1,uttar pradesh,S15,nfhs4s_urban,84.90979301565432
@@ -1234,6 +1268,7 @@ v025,state,id,variable,mean
 1,uttarakhand,S14,nfhs4s_urban,81.67369218094869
 1,uttarakhand,S16,nfhs4s_urban,54.8417276056763
 1,uttarakhand,S20,nfhs4s_urban,29.736679328067993
+1,uttarakhand,S20_rev,nfhs4s_urban,70.26332067193201
 1,uttarakhand,S128,nfhs4s_urban,2.9436721165640294
 1,uttarakhand,S130,nfhs4s_urban,0.4985352937020411
 1,uttarakhand,S15,nfhs4s_urban,92.4765574194551
@@ -1270,6 +1305,7 @@ v025,state,id,variable,mean
 1,west bengal,S14,nfhs4s_urban,79.37335349088997
 1,west bengal,S16,nfhs4s_urban,39.89970482049095
 1,west bengal,S20,nfhs4s_urban,24.246639153629687
+1,west bengal,S20_rev,nfhs4s_urban,75.75336084637033
 1,west bengal,S128,nfhs4s_urban,7.4222521723935255
 1,west bengal,S130,nfhs4s_urban,0.7186679971777277
 1,west bengal,S15,nfhs4s_urban,82.12901200584317
@@ -1306,6 +1342,7 @@ v025,state,id,variable,mean
 2,andaman and nicobar islands,S14,nfhs4s_rural,80.21686971432331
 2,andaman and nicobar islands,S16,nfhs4s_rural,42.59396673176529
 2,andaman and nicobar islands,S20,nfhs4s_rural,25.293483997987725
+2,andaman and nicobar islands,S20_rev,nfhs4s_rural,74.70651600201228
 2,andaman and nicobar islands,S128,nfhs4s_rural,32.72217402758612
 2,andaman and nicobar islands,S130,nfhs4s_rural,3.470308910539245
 2,andaman and nicobar islands,S15,nfhs4s_rural,82.62194892235362
@@ -1342,6 +1379,7 @@ v025,state,id,variable,mean
 2,andhra pradesh,S14,nfhs4s_rural,57.38158263538015
 2,andhra pradesh,S16,nfhs4s_rural,28.38592286213533
 2,andhra pradesh,S20,nfhs4s_rural,28.488888787248364
+2,andhra pradesh,S20_rev,nfhs4s_rural,71.51111121275163
 2,andhra pradesh,S128,nfhs4s_rural,2.9271743311371936
 2,andhra pradesh,S130,nfhs4s_rural,0.5972022076150153
 2,andhra pradesh,S15,nfhs4s_rural,71.18041991902574
@@ -1378,6 +1416,7 @@ v025,state,id,variable,mean
 2,arunachal pradesh,S14,nfhs4s_rural,60.117682292859655
 2,arunachal pradesh,S16,nfhs4s_rural,23.718051544593692
 2,arunachal pradesh,S20,nfhs4s_rural,22.70661174664578
+2,arunachal pradesh,S20_rev,nfhs4s_rural,77.29338825335421
 2,arunachal pradesh,S128,nfhs4s_rural,18.565699252884183
 2,arunachal pradesh,S130,nfhs4s_rural,27.779307477724245
 2,arunachal pradesh,S15,nfhs4s_rural,78.70338449248902
@@ -1414,6 +1453,7 @@ v025,state,id,variable,mean
 2,assam,S14,nfhs4s_rural,69.16363048701105
 2,assam,S16,nfhs4s_rural,22.470554189476825
 2,assam,S20,nfhs4s_rural,24.916564614151795
+2,assam,S20_rev,nfhs4s_rural,75.0834353858482
 2,assam,S128,nfhs4s_rural,20.29931539949896
 2,assam,S130,nfhs4s_rural,7.652814712858031
 2,assam,S15,nfhs4s_rural,78.96157031950119
@@ -1450,6 +1490,7 @@ v025,state,id,variable,mean
 2,bihar,S14,nfhs4s_rural,46.2774330372819
 2,bihar,S16,nfhs4s_rural,19.499128172057368
 2,bihar,S20,nfhs4s_rural,28.703647633079065
+2,bihar,S20_rev,nfhs4s_rural,71.29635236692093
 2,bihar,S128,nfhs4s_rural,2.975302174570913
 2,bihar,S130,nfhs4s_rural,0.24588737523972812
 2,bihar,S15,nfhs4s_rural,73.86217013916657
@@ -1486,6 +1527,7 @@ v025,state,id,variable,mean
 2,chandigarh,S14,nfhs4s_rural,63.33333333333333
 2,chandigarh,S16,nfhs4s_rural,30
 2,chandigarh,S20,nfhs4s_rural,0
+2,chandigarh,S20_rev,nfhs4s_rural,100
 2,chandigarh,S128,nfhs4s_rural,0
 2,chandigarh,S130,nfhs4s_rural,0
 2,chandigarh,S15,nfhs4s_rural,66.66666666666667
@@ -1522,6 +1564,7 @@ v025,state,id,variable,mean
 2,chhattisgarh,S14,nfhs4s_rural,61.32439567812349
 2,chhattisgarh,S16,nfhs4s_rural,20.05974150453604
 2,chhattisgarh,S20,nfhs4s_rural,31.747143958255897
+2,chhattisgarh,S20_rev,nfhs4s_rural,68.25285604174411
 2,chhattisgarh,S128,nfhs4s_rural,24.397057379609972
 2,chhattisgarh,S130,nfhs4s_rural,6.177095165882419
 2,chhattisgarh,S15,nfhs4s_rural,80.58448902085506
@@ -1558,6 +1601,7 @@ v025,state,id,variable,mean
 2,daman and diu,S14,nfhs4s_rural,53.29036407590796
 2,daman and diu,S16,nfhs4s_rural,24.462635685628562
 2,daman and diu,S20,nfhs4s_rural,21.26251898466008
+2,daman and diu,S20_rev,nfhs4s_rural,78.73748101533992
 2,daman and diu,S128,nfhs4s_rural,1.947078639404675
 2,daman and diu,S130,nfhs4s_rural,0.06621366593176689
 2,daman and diu,S15,nfhs4s_rural,70.07352023856076
@@ -1594,6 +1638,7 @@ v025,state,id,variable,mean
 2,delhi,S14,nfhs4s_rural,85.11198940625013
 2,delhi,S16,nfhs4s_rural,60.01178095737061
 2,delhi,S20,nfhs4s_rural,46.836305621518875
+2,delhi,S20_rev,nfhs4s_rural,53.16369437848113
 2,delhi,S128,nfhs4s_rural,1.926935440348826
 2,delhi,S130,nfhs4s_rural,0
 2,delhi,S15,nfhs4s_rural,92.69413233432424
@@ -1630,6 +1675,7 @@ v025,state,id,variable,mean
 2,goa,S14,nfhs4s_rural,90.80821641261545
 2,goa,S16,nfhs4s_rural,57.670382077164064
 2,goa,S20,nfhs4s_rural,13.79294440123546
+2,goa,S20_rev,nfhs4s_rural,86.20705559876455
 2,goa,S128,nfhs4s_rural,2.329884531984206
 2,goa,S130,nfhs4s_rural,4.3883328211082935
 2,goa,S15,nfhs4s_rural,95.66729719108741
@@ -1666,6 +1712,7 @@ v025,state,id,variable,mean
 2,gujarat,S14,nfhs4s_rural,64.75417081781745
 2,gujarat,S16,nfhs4s_rural,23.07964589558134
 2,gujarat,S20,nfhs4s_rural,28.13111910882145
+2,gujarat,S20_rev,nfhs4s_rural,71.86888089117855
 2,gujarat,S128,nfhs4s_rural,9.096202047502073
 2,gujarat,S130,nfhs4s_rural,0.3758796017987142
 2,gujarat,S15,nfhs4s_rural,85.18896511188956
@@ -1702,6 +1749,7 @@ v025,state,id,variable,mean
 2,haryana,S14,nfhs4s_rural,72.07602691209918
 2,haryana,S16,nfhs4s_rural,39.70147555280448
 2,haryana,S20,nfhs4s_rural,39.81690262535456
+2,haryana,S20_rev,nfhs4s_rural,60.18309737464544
 2,haryana,S128,nfhs4s_rural,1.5865266480989553
 2,haryana,S130,nfhs4s_rural,0.04940262703257223
 2,haryana,S15,nfhs4s_rural,88.27340678824186
@@ -1738,6 +1786,7 @@ v025,state,id,variable,mean
 2,himachal pradesh,S14,nfhs4s_rural,87.77434346975018
 2,himachal pradesh,S16,nfhs4s_rural,57.92462851264166
 2,himachal pradesh,S20,nfhs4s_rural,36.24045998465762
+2,himachal pradesh,S20_rev,nfhs4s_rural,63.75954001534239
 2,himachal pradesh,S128,nfhs4s_rural,0.4724388703777357
 2,himachal pradesh,S130,nfhs4s_rural,0.25780981020702026
 2,himachal pradesh,S15,nfhs4s_rural,95.53036283308816
@@ -1774,6 +1823,7 @@ v025,state,id,variable,mean
 2,jammu and kashmir,S14,nfhs4s_rural,65.40053300115527
 2,jammu and kashmir,S16,nfhs4s_rural,31.862484174164653
 2,jammu and kashmir,S20,nfhs4s_rural,21.739572728211915
+2,jammu and kashmir,S20_rev,nfhs4s_rural,78.26042727178809
 2,jammu and kashmir,S128,nfhs4s_rural,3.3271070686163133
 2,jammu and kashmir,S130,nfhs4s_rural,0.06651366158808629
 2,jammu and kashmir,S15,nfhs4s_rural,84.61452201542184
@@ -1810,6 +1860,7 @@ v025,state,id,variable,mean
 2,jharkhand,S14,nfhs4s_rural,51.4482970938184
 2,jharkhand,S16,nfhs4s_rural,20.17784266370229
 2,jharkhand,S20,nfhs4s_rural,22.291457896526627
+2,jharkhand,S20_rev,nfhs4s_rural,77.70854210347338
 2,jharkhand,S128,nfhs4s_rural,6.710940059144123
 2,jharkhand,S130,nfhs4s_rural,5.461345926302299
 2,jharkhand,S15,nfhs4s_rural,74.36034998341091
@@ -1846,6 +1897,7 @@ v025,state,id,variable,mean
 2,karnataka,S14,nfhs4s_rural,63.84373788289505
 2,karnataka,S16,nfhs4s_rural,35.11212337933402
 2,karnataka,S20,nfhs4s_rural,31.475938982772433
+2,karnataka,S20_rev,nfhs4s_rural,68.52406101722755
 2,karnataka,S128,nfhs4s_rural,5.0089161404653435
 2,karnataka,S130,nfhs4s_rural,0.5320253791788531
 2,karnataka,S15,nfhs4s_rural,79.69052901949796
@@ -1882,6 +1934,7 @@ v025,state,id,variable,mean
 2,kerala,S14,nfhs4s_rural,97.32955404105861
 2,kerala,S16,nfhs4s_rural,70.52055832868676
 2,kerala,S20,nfhs4s_rural,30.317691531840023
+2,kerala,S20_rev,nfhs4s_rural,69.68230846815997
 2,kerala,S128,nfhs4s_rural,1.3567852671820848
 2,kerala,S130,nfhs4s_rural,0.9228624677447811
 2,kerala,S15,nfhs4s_rural,98.26752034889577
@@ -1918,6 +1971,7 @@ v025,state,id,variable,mean
 2,ladakh,S14,nfhs4s_rural,65.03645769976416
 2,ladakh,S16,nfhs4s_rural,38.67588931683886
 2,ladakh,S20,nfhs4s_rural,19.221548667413895
+2,ladakh,S20_rev,nfhs4s_rural,80.7784513325861
 2,ladakh,S128,nfhs4s_rural,0.5682463583347772
 2,ladakh,S130,nfhs4s_rural,2.6265918957807672
 2,ladakh,S15,nfhs4s_rural,82.97972891919999
@@ -1954,6 +2008,7 @@ v025,state,id,variable,mean
 2,lakshadweep,S14,nfhs4s_rural,95.52255728795913
 2,lakshadweep,S16,nfhs4s_rural,52.2466691161762
 2,lakshadweep,S20,nfhs4s_rural,37.566206370572914
+2,lakshadweep,S20_rev,nfhs4s_rural,62.43379362942708
 2,lakshadweep,S128,nfhs4s_rural,20.980936549596326
 2,lakshadweep,S130,nfhs4s_rural,0
 2,lakshadweep,S15,nfhs4s_rural,95.53775283691486
@@ -1990,6 +2045,7 @@ v025,state,id,variable,mean
 2,madhya pradesh,S14,nfhs4s_rural,51.420385255319864
 2,madhya pradesh,S16,nfhs4s_rural,14.10133546080807
 2,madhya pradesh,S20,nfhs4s_rural,29.471033017215664
+2,madhya pradesh,S20_rev,nfhs4s_rural,70.52896698278434
 2,madhya pradesh,S128,nfhs4s_rural,12.136169795147952
 2,madhya pradesh,S130,nfhs4s_rural,2.1052866573580626
 2,madhya pradesh,S15,nfhs4s_rural,76.64378540677724
@@ -2026,6 +2082,7 @@ v025,state,id,variable,mean
 2,maharashtra,S14,nfhs4s_rural,74.80732144547133
 2,maharashtra,S16,nfhs4s_rural,32.57413346715586
 2,maharashtra,S20,nfhs4s_rural,32.02938425335453
+2,maharashtra,S20_rev,nfhs4s_rural,67.97061574664546
 2,maharashtra,S128,nfhs4s_rural,7.349325433634776
 2,maharashtra,S130,nfhs4s_rural,0.2306440277959956
 2,maharashtra,S15,nfhs4s_rural,90.17590888462979
@@ -2062,6 +2119,7 @@ v025,state,id,variable,mean
 2,manipur,S14,nfhs4s_rural,81.70644601245942
 2,manipur,S16,nfhs4s_rural,38.371270714843256
 2,manipur,S20,nfhs4s_rural,28.872090187442783
+2,manipur,S20_rev,nfhs4s_rural,71.12790981255722
 2,manipur,S128,nfhs4s_rural,50.64857323734153
 2,manipur,S130,nfhs4s_rural,6.083163349055242
 2,manipur,S15,nfhs4s_rural,94.38020262105977
@@ -2098,6 +2156,7 @@ v025,state,id,variable,mean
 2,meghalaya,S14,nfhs4s_rural,79.57925022783361
 2,meghalaya,S16,nfhs4s_rural,25.803612525036527
 2,meghalaya,S20,nfhs4s_rural,24.28271027169138
+2,meghalaya,S20_rev,nfhs4s_rural,75.71728972830861
 2,meghalaya,S128,nfhs4s_rural,33.47587640580967
 2,meghalaya,S130,nfhs4s_rural,1.8381577827276743
 2,meghalaya,S15,nfhs4s_rural,79.55054893497771
@@ -2134,6 +2193,7 @@ v025,state,id,variable,mean
 2,mizoram,S14,nfhs4s_rural,85.62085231027639
 2,mizoram,S16,nfhs4s_rural,21.505635987788445
 2,mizoram,S20,nfhs4s_rural,19.50701414597964
+2,mizoram,S20_rev,nfhs4s_rural,80.49298585402038
 2,mizoram,S128,nfhs4s_rural,59.810463378528354
 2,mizoram,S130,nfhs4s_rural,2.28374457473815
 2,mizoram,S15,nfhs4s_rural,96.05621200773649
@@ -2170,6 +2230,7 @@ v025,state,id,variable,mean
 2,nagaland,S14,nfhs4s_rural,75.16328583873938
 2,nagaland,S16,nfhs4s_rural,21.862598895662035
 2,nagaland,S20,nfhs4s_rural,27.669475255402187
+2,nagaland,S20_rev,nfhs4s_rural,72.33052474459782
 2,nagaland,S128,nfhs4s_rural,23.80833479490859
 2,nagaland,S130,nfhs4s_rural,2.401411409097876
 2,nagaland,S15,nfhs4s_rural,79.85496876073549
@@ -2206,6 +2267,7 @@ v025,state,id,variable,mean
 2,odisha,S14,nfhs4s_rural,64.52644469342684
 2,odisha,S16,nfhs4s_rural,23.001607668714737
 2,odisha,S20,nfhs4s_rural,29.265819666068666
+2,odisha,S20_rev,nfhs4s_rural,70.73418033393133
 2,odisha,S128,nfhs4s_rural,18.848495341877726
 2,odisha,S130,nfhs4s_rural,2.5783653905243478
 2,odisha,S15,nfhs4s_rural,79.69392832098283
@@ -2242,6 +2304,7 @@ v025,state,id,variable,mean
 2,puducherry,S14,nfhs4s_rural,84.78207764235573
 2,puducherry,S16,nfhs4s_rural,56.78451219650942
 2,puducherry,S20,nfhs4s_rural,33.53939699984608
+2,puducherry,S20_rev,nfhs4s_rural,66.46060300015392
 2,puducherry,S128,nfhs4s_rural,1.773786098548646
 2,puducherry,S130,nfhs4s_rural,0.697693077353655
 2,puducherry,S15,nfhs4s_rural,95.13837384176499
@@ -2278,6 +2341,7 @@ v025,state,id,variable,mean
 2,punjab,S14,nfhs4s_rural,78.37703415586552
 2,punjab,S16,nfhs4s_rural,47.401893952574994
 2,punjab,S20,nfhs4s_rural,30.334122469248072
+2,punjab,S20_rev,nfhs4s_rural,69.66587753075193
 2,punjab,S128,nfhs4s_rural,0.10955629417262175
 2,punjab,S130,nfhs4s_rural,0.020076219905903348
 2,punjab,S15,nfhs4s_rural,84.08590375587347
@@ -2314,6 +2378,7 @@ v025,state,id,variable,mean
 2,rajasthan,S14,nfhs4s_rural,49.83207995741666
 2,rajasthan,S16,nfhs4s_rural,18.804632813914445
 2,rajasthan,S20,nfhs4s_rural,30.549268159925823
+2,rajasthan,S20_rev,nfhs4s_rural,69.45073184007417
 2,rajasthan,S128,nfhs4s_rural,6.3318898380155195
 2,rajasthan,S130,nfhs4s_rural,0.09742204672937432
 2,rajasthan,S15,nfhs4s_rural,80.59039855201719
@@ -2350,6 +2415,7 @@ v025,state,id,variable,mean
 2,sikkim,S14,nfhs4s_rural,85.19785694954255
 2,sikkim,S16,nfhs4s_rural,36.05557038505117
 2,sikkim,S20,nfhs4s_rural,18.27459398072956
+2,sikkim,S20_rev,nfhs4s_rural,81.72540601927045
 2,sikkim,S128,nfhs4s_rural,6.916661143084359
 2,sikkim,S130,nfhs4s_rural,23.099710462020035
 2,sikkim,S15,nfhs4s_rural,87.89510476943536
@@ -2386,6 +2452,7 @@ v025,state,id,variable,mean
 2,tamil nadu,S14,nfhs4s_rural,72.89100396018326
 2,tamil nadu,S16,nfhs4s_rural,42.87297644445078
 2,tamil nadu,S20,nfhs4s_rural,32.50056474769757
+2,tamil nadu,S20_rev,nfhs4s_rural,67.49943525230243
 2,tamil nadu,S128,nfhs4s_rural,2.9826465581289896
 2,tamil nadu,S130,nfhs4s_rural,0.2824720302225215
 2,tamil nadu,S15,nfhs4s_rural,83.25138199086396
@@ -2422,6 +2489,7 @@ v025,state,id,variable,mean
 2,telangana,S14,nfhs4s_rural,52.36843427708258
 2,telangana,S16,nfhs4s_rural,30.51459828149187
 2,telangana,S20,nfhs4s_rural,27.473604692894995
+2,telangana,S20_rev,nfhs4s_rural,72.526395307105
 2,telangana,S128,nfhs4s_rural,4.42236985134747
 2,telangana,S130,nfhs4s_rural,14.336500474033311
 2,telangana,S15,nfhs4s_rural,74.42628854366637
@@ -2458,6 +2526,7 @@ v025,state,id,variable,mean
 2,tripura,S14,nfhs4s_rural,76.94568947423627
 2,tripura,S16,nfhs4s_rural,16.337917971131322
 2,tripura,S20,nfhs4s_rural,26.38329333515403
+2,tripura,S20_rev,nfhs4s_rural,73.61670666484598
 2,tripura,S128,nfhs4s_rural,44.01729068969066
 2,tripura,S130,nfhs4s_rural,6.662170266958868
 2,tripura,S15,nfhs4s_rural,85.70511673783655
@@ -2494,6 +2563,7 @@ v025,state,id,variable,mean
 2,uttar pradesh,S14,nfhs4s_rural,56.16114884806348
 2,uttar pradesh,S16,nfhs4s_rural,27.427437119866806
 2,uttar pradesh,S20,nfhs4s_rural,33.26681425495945
+2,uttar pradesh,S20_rev,nfhs4s_rural,66.73318574504056
 2,uttar pradesh,S128,nfhs4s_rural,8.197867364239217
 2,uttar pradesh,S130,nfhs4s_rural,0.16650789469812355
 2,uttar pradesh,S15,nfhs4s_rural,80.16137199122659
@@ -2530,6 +2600,7 @@ v025,state,id,variable,mean
 2,uttarakhand,S14,nfhs4s_rural,73.60366702399747
 2,uttarakhand,S16,nfhs4s_rural,38.79256769220129
 2,uttarakhand,S20,nfhs4s_rural,35.77708498754964
+2,uttarakhand,S20_rev,nfhs4s_rural,64.22291501245037
 2,uttarakhand,S128,nfhs4s_rural,2.917383156111816
 2,uttarakhand,S130,nfhs4s_rural,0.19383885950054552
 2,uttarakhand,S15,nfhs4s_rural,88.70011571801976
@@ -2566,6 +2637,7 @@ v025,state,id,variable,mean
 2,west bengal,S14,nfhs4s_rural,66.93401511351598
 2,west bengal,S16,nfhs4s_rural,20.125151806317575
 2,west bengal,S20,nfhs4s_rural,22.098256422748847
+2,west bengal,S20_rev,nfhs4s_rural,77.90174357725115
 2,west bengal,S128,nfhs4s_rural,9.25132927026538
 2,west bengal,S130,nfhs4s_rural,0.8846219493559481
 2,west bengal,S15,nfhs4s_rural,77.33506554653896

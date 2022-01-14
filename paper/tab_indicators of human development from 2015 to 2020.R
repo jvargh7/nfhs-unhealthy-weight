@@ -1,19 +1,19 @@
 ds_ids = c("S86","S87","S88","S89",
            
-           "S14","S16","S20",
+           "S14","S16","S20_rev",
            "S09","S08",
            "S07","S10","S12")
-state_pc <- read_csv("unhealthy weight/state_pc.csv") %>% 
+state_pc <- read_csv("analysis/state_pc.csv") %>% 
   mutate(id = "INDEX") %>% 
   rename(nfhs5s_total = nfhs5s_pc1,
          nfhs4s_total = nfhs4s_pc1)
 
-india <- read_csv("nfhs4 estimates/india long.csv") %>% 
+india <- read_csv("nfhs4/india long.csv") %>% 
   dplyr::filter(id %in% ds_ids) %>% 
   mutate(india_nfhs4 = paste0(round(mean,1)," (",
                               round(lci,1),", ",
                               round(uci,1),")")) %>% 
-  left_join(read_csv("chronic disease/india.csv") %>% 
+  left_join(read_csv("data/india.csv") %>% 
               dplyr::select(id,nfhs5s_total),
             by = "id") %>% 
   dplyr::select(id,nfhs5s_total,india_nfhs4) %>% 
@@ -21,7 +21,7 @@ india <- read_csv("nfhs4 estimates/india long.csv") %>%
 
 
 
-states <- read_csv("chronic disease/states.csv") %>% 
+states <- read_csv("data/states.csv") %>% 
   dplyr::filter(id %in% ds_ids) %>% 
   dplyr::select(id,state,nfhs5s_total,nfhs4s_total)  %>%
   bind_rows(state_pc) %>% 
@@ -35,9 +35,9 @@ states <- read_csv("chronic disease/states.csv") %>%
             )
 
 
-change_india <- read_csv("nfhs4 estimates/india long.csv") %>% 
+change_india <- read_csv("nfhs4/india long.csv") %>% 
   dplyr::filter(id %in% ds_ids) %>% 
-  left_join(read_csv("chronic disease/india.csv") %>% 
+  left_join(read_csv("data/india.csv") %>% 
               dplyr::select(id,nfhs5s_total),
             by = "id") %>% 
   mutate(se = (mean - lci)/1.96,
@@ -51,9 +51,9 @@ change_india <- read_csv("nfhs4 estimates/india long.csv") %>%
          ) %>% 
   dplyr::select(id,india_change)
 
-change_states <- read_csv("nfhs4 estimates/state long.csv") %>% 
+change_states <- read_csv("nfhs4/state long.csv") %>% 
   dplyr::filter(id %in% ds_ids) %>% 
-  left_join(read_csv("chronic disease/states.csv") %>% 
+  left_join(read_csv("data/states.csv") %>% 
               dplyr::select(id,v024_label,nfhs5s_total),
             by=c("id","state"="v024_label")) %>% 
   mutate(se = (mean - lci)/1.96,

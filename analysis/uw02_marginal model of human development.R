@@ -1,7 +1,7 @@
 ds_ids = c("INDEX",
            "S07","S08","S09",
            "S10","S12",
-           "S14","S16","S20")
+           "S14","S16","S20_rev")
 
 outcome_ids <- c("S86","S87","S88","S89")
 
@@ -28,19 +28,24 @@ district_wide <- read_csv("data/districts_plus_uts.csv") %>%
   mutate(v024_nfhs5 = case_when(nfhs5_statecode == "DD" ~ 8,
                                 nfhs5_statecode == "LH" ~ 37,
                                 TRUE ~ v024_nfhs4),
-         unhealthy = S86 + S88)
+         unhealthy = S86 + S88) %>% 
+  left_join( read_csv("data/census_2011_pop.csv") %>% 
+               dplyr::select(sdistrict,urbanization),
+             by=c("sdistri" = "sdistrict"))
 
 library(geepack)
 
+source("C:/code/external/functions/imputation/contrasts_geeglm.R")
+
 model_summary <- bind_rows(
-  geeglm(unhealthy ~ nfhs5*INDEX,id = v024_nfhs5,data=district_wide,corstr="exchangeable") %>% 
+  (m1 <- geeglm(unhealthy ~ nfhs5*INDEX + urbanization,id = v024_nfhs5,data=district_wide,corstr="exchangeable")) %>% 
     broom::tidy(.) %>% 
     mutate(outcome = "UNHEALTHY"),
   
-  geeglm(S86 ~ nfhs5*INDEX,id = v024_nfhs5,data=district_wide,corstr="exchangeable") %>% 
+  (m2 <- geeglm(S86 ~ nfhs5*INDEX + urbanization,id = v024_nfhs5,data=district_wide,corstr="exchangeable")) %>% 
   broom::tidy(.) %>% 
     mutate(outcome = "S86"),
-  geeglm(S88 ~ nfhs5*INDEX,id = v024_nfhs5,data=district_wide,corstr="exchangeable") %>% 
+  (m3 <- geeglm(S88 ~ nfhs5*INDEX + urbanization,id = v024_nfhs5,data=district_wide,corstr="exchangeable")) %>% 
     broom::tidy(.) %>% 
     mutate(outcome = "S88")) %>% 
   mutate(coef_ci = paste0(estimate %>% round(.,2), "(",
@@ -48,6 +53,33 @@ model_summary <- bind_rows(
                           (estimate + 1.96*std.error) %>% round(.,2),")"
                           ))
   
+model_summary %>% 
+  dplyr::filter(term %in% c("nfhs5","INDEX","nfhs5:INDEX")) %>% 
+  dplyr::select(term,outcome,coef_ci) %>% 
+  pivot_wider(names_from=outcome,values_from=coef_ci) %>% 
+  write_csv(.,paste0(path_ecological_analysis,"/working/table marginal models of human development.csv"))
+
+bind_rows(
+  contrasts_geeglm(m1,model_matrix=matrix(c(0,0,1,0,0,
+                                            0,0,1,0,1,
+                                            0,0,0,0,1),nrow=3,byrow=TRUE),
+                   row_names = c("NFHS 4","NFHS 5","Difference")) %>% mutate(outcome = "UNHEALTHY"),
+  contrasts_geeglm(m2,model_matrix=matrix(c(0,0,1,0,0,
+                                            0,0,1,0,1,
+                                            0,0,0,0,1),nrow=3,byrow=TRUE),
+                   row_names = c("NFHS 4","NFHS 5","Difference")) %>% mutate(outcome = "S86"),
+  contrasts_geeglm(m3,model_matrix=matrix(c(0,0,1,0,0,
+                                            0,0,1,0,1,
+                                            0,0,0,0,1),nrow=3,byrow=TRUE),
+                   row_names = c("NFHS 4","NFHS 5","Difference")) %>% mutate(outcome = "S88")
+) %>% 
+  mutate(coef_ci = paste0(Estimate %>% round(.,2), " (",
+                          LCI %>% round(.,2),", ",
+                          UCI %>% round(.,2),")"
+  )) %>% 
+  dplyr::select(term,outcome,coef_ci) %>% 
+  pivot_wider(names_from=outcome,values_from=coef_ci) %>% 
+  write_csv(.,paste0(path_ecological_analysis,"/working/table contrasts of marginal models of human development.csv"))
 
 district_wide %>% 
   dplyr::select(sdistri,nfhs5,INDEX,S86,S88,unhealthy) %>% 

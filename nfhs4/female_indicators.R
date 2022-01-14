@@ -5,7 +5,7 @@
 # S106	Women (age 15 and above) Moderately or severely elevated blood pressure (Systolic >= 160mm of Hg and/or Diastolic >= 100mm of Hg) (%)
 # S107	Women (age 15 and above) Elevated blood pressure (Systolic >= 140 mm of Hg and/or Diastolic >= 90 mm of Hg) or taking medicine to control blood pressure (%)
 
-
+require(srvyr)
 female <- readRDS(paste0(path_ecological_analysis,"/working/iair74_clean.RDS"))
 
 female_df <- female %>% 
@@ -26,6 +26,15 @@ female_df <- female %>%
                     TRUE ~ NA_real_
     ),
 
+    S20_rev = case_when(
+      v511 == 99 ~ NA_real_,
+      v012 < 20 | v012 > 24 ~ NA_real_,
+      v012 %in% c(20:24) & is.na(v511) ~ 1,
+      v012 %in% c(20:24) & v511 %in% c(0:18) ~ 1,
+      v012 %in% c(20:24) & v511 %in% c(19:24) ~ 0,
+      TRUE ~ NA_real_
+    ),
+    
     S86 = case_when(v445 > 6000 ~ NA_real_,
                                   v445 < 1850 ~ 1,
                                   v445 >= 1850 ~ 0,
@@ -117,7 +126,7 @@ india_female_ses_indicators <- female_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S14","S16","S20","S128","S130")) %>% 
+                   variables = c("S14","S16","S20","S20_rev","S128","S130")) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
 
 bind_cols(india_female_cvd_indicators,
@@ -141,7 +150,7 @@ female_ses_indicators <- female_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S14","S16","S20","S128","S130","state")) %>% 
+                   variables = c("S14","S16","S20","S20_rev","S128","S130","state")) %>% 
   group_by(state) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
 
@@ -168,7 +177,7 @@ region_female_ses_indicators <- female_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S14","S16","S20","S128","S130","state","v025")) %>% 
+                   variables = c("S14","S16","S20","S20_rev","S128","S130","state","v025")) %>% 
   group_by(v025,state) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
 
@@ -196,7 +205,7 @@ d_female_ses_indicators <- female_df %>%
                    weight = weight,
                    nest = FALSE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S14","S16","S20","S128","S130","sdistri")) %>% 
+                   variables = c("S14","S16","S20","S20_rev","S128","S130","sdistri")) %>% 
   group_by(sdistri) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
 

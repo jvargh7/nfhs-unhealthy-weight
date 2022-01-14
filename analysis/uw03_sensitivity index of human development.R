@@ -1,4 +1,4 @@
-ds_sens_ids = c("S14","S16","S20",
+ds_sens_ids = c("S14","S16","S20_rev",
            "S09","S08",
            "S07","S10","S12",
            "S15","S17","S119",
@@ -47,7 +47,7 @@ with(state_pc_sens,cor.test(nfhs4s_pc1,nfhs4s_pcsens1,method="spearman"))
 with(state_pc_sens,cor.test(nfhs5s_pc1,nfhs5s_pcsens1,method="spearman"))
 
 
-pca_sens_obj$rotation %>% 
+pca_obj$rotation %>% 
   data.frame() %>% 
   mutate(id = rownames(.)) %>% 
   rename_at(vars(starts_with("PC")),~paste0(.,"_v1")) %>% 

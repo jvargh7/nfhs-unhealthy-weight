@@ -1,21 +1,21 @@
 
-ds_ids = c("S14","S16","S20",
+ds_ids = c("S14","S16","S20_rev",
            "S09","S08",
            "S07","S10","S12","INDEX")
 outcome_ids <- c("S86","S87","S88","S89","Unhealthy Women","Unhealthy Men")
 
-state_pc <- read_csv("unhealthy weight/state_pc.csv") %>% 
+state_pc <- read_csv("analysis/state_pc.csv") %>% 
   mutate(id = "INDEX") %>% 
   rename(nfhs5s_total = nfhs5s_pc1,
          nfhs4s_total = nfhs4s_pc1)
 
 
-indicators_states <- read_csv("chronic disease/states.csv") %>% 
+indicators_states <- read_csv("data/states.csv") %>% 
   dplyr::filter(id %in% ds_ids) %>% 
   dplyr::select(id,state,nfhs5s_total,nfhs4s_total)  %>%
   bind_rows(state_pc)
 
-outcomes_states <- read_csv("chronic disease/states.csv") %>% 
+outcomes_states <- read_csv("data/states.csv") %>% 
   dplyr::filter(id %in% outcome_ids) %>% 
   dplyr::select(id,state,nfhs5s_total,nfhs4s_total)
 
