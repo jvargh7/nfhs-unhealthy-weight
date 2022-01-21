@@ -64,7 +64,7 @@ change_states <- read_csv("nfhs4/state long.csv") %>%
   summarize(state_change = paste0(median(state_change) %>% round(.,1)," [",
                                   quantile(state_change,0.25) %>% round(.,1),", ",
                                   quantile(state_change,0.75) %>% round(.,1),"]",
-                                  ", ",sum(abs(z)> 1.96))
+                                  ", ",sum(abs(z)> 2.58))
   )
 
 

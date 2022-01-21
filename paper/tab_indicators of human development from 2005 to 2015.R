@@ -2,18 +2,18 @@
 
 ds_ids = c("S86","S87","S88","S89",
            
-           "S14","S16","S20",
+           "S14","S16","S20_rev",
            "S09","S08",
            "S07","S10","S12")
 
-state_pc <- read_csv("unhealthy weight/state_pc.csv") %>% 
+state_pc <- read_csv("analysis/state_pc.csv") %>% 
   mutate(id = "INDEX") %>% 
   dplyr::select(-nfhs5s_pc1) %>% 
   rename(nfhs3s_total = nfhs3s_pc1,
          nfhs4s_total = nfhs4s_pc1)
 
 # INDIA ----------
-india <- read_csv("nfhs4 estimates/india long.csv") %>% 
+india <- read_csv("nfhs4/india long.csv") %>% 
   dplyr::filter(id %in% ds_ids) %>% 
   mutate(india_nfhs4 = paste0(round(mean,1)," (",
                               round(lci,1),", ",
@@ -22,7 +22,7 @@ india <- read_csv("nfhs4 estimates/india long.csv") %>%
          se_nfhs4 = (mean - lci)/1.96
          ) %>% 
   dplyr::select(id,india_nfhs4,mean_nfhs4,se_nfhs4) %>% 
-  left_join(read_csv("nfhs3 estimates/india long.csv") %>% 
+  left_join(read_csv("nfhs3/india long.csv") %>% 
               mutate(india_nfhs3 = paste0(round(mean,1)," (",
                                           round(lci,1),", ",
                                           round(uci,1),")"),
@@ -42,9 +42,9 @@ india <- read_csv("nfhs4 estimates/india long.csv") %>%
 
 
 # STATES --------------
-nfhs5_factsheet_map <- readxl::read_excel(paste0(extracts_path,"/mapping.xlsx"),sheet="nfhs5_factsheet_map")
+nfhs5_factsheet_map <- readxl::read_excel("data/uw_mapping.xlsx",sheet="nfhs5_factsheet_map")
 
-states <- read_csv("nfhs4 estimates/state long.csv") %>% 
+states <- read_csv("nfhs4/state long.csv") %>% 
   dplyr::filter(id %in% ds_ids)  %>% 
   mutate(state_nfhs4 = paste0(round(mean,1)," (",
                               round(lci,1),", ",
@@ -56,7 +56,7 @@ states <- read_csv("nfhs4 estimates/state long.csv") %>%
   left_join(nfhs5_factsheet_map,
             by = c("state"="v024_label")) %>% 
   
-  left_join(read_csv("nfhs3 estimates/state long.csv") %>% 
+  left_join(read_csv("nfhs3/state long.csv") %>% 
               mutate(state_nfhs3 = paste0(round(mean,1)," (",
                                           round(lci,1),", ",
                                           round(uci,1),")"),
@@ -86,7 +86,7 @@ states <- read_csv("nfhs4 estimates/state long.csv") %>%
             state_change = paste0(median(state_change) %>% round(.,1)," [",
                                   quantile(state_change,0.25) %>% round(.,1),", ",
                                   quantile(state_change,0.75) %>% round(.,1),"]",
-                                  ", ",sum(abs(z)> 1.96)))
+                                  ", ",sum(abs(z)> 2.58)))
             
       
 
