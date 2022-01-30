@@ -61,8 +61,8 @@ states_scatter <- function(state_ids,plot_title,names = c("Underweight","Overwei
     geom_smooth(method="lm",aes(group=id,col=id),se = FALSE) +
     theme_bw() +
     geom_abline(intercept = 0,slope=1,col="black",linetype=2) +
-    xlab("NFHS-4 (%)") +
-    ylab("NFHS-5 (%)") +
+    xlab("2015-16 (%)") +
+    ylab("2019-20 (%)") +
     theme(legend.position = "bottom") +
     scale_color_discrete(name="")
   

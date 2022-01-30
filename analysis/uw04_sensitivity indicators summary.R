@@ -24,7 +24,7 @@ states <- read_csv("data/states_plus_nfhs3.csv") %>%
 left_join(states,
           india,
           by="id") %>% 
-  dplyr::select(id,contains("nfhs4"),contains("nfhs5")) %>% 
+  dplyr::select(id,india_nfhs4,state_nfhs4,india_nfhs5,state_nfhs5) %>% 
   write_csv(.,paste0(path_ecological_analysis,"/working/sensitivity additional human development summary.csv"))
 
 

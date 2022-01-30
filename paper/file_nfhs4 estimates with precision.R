@@ -7,3 +7,9 @@ bind_rows(districts,
           india %>% mutate(state = "India")) %>% 
 
 write_csv(.,path = "data/supplementary file 2.csv")
+
+bind_rows(districts,
+          states,
+          india %>% mutate(state = "India")) %>% 
+  
+  write_csv(.,path = paste0(path_ecological_analysis,"/writing/supplementary file 2.csv"))

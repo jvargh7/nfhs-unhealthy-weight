@@ -8,6 +8,7 @@
 male <- readRDS(paste0(path_ecological_analysis,"/working/iamr52_clean.RDS"))
 
 male_df <- male %>% 
+  dplyr::filter(mv012 %in% c(15:49)) %>% 
   mutate(
     S15 = case_when(mv133 %in% c(9:20) | mv155 %in% c(1,2)~ 1,
                     TRUE ~ 0),
@@ -42,7 +43,7 @@ male_df <- male %>%
                      sm612 == 1 ~ 1,
                      TRUE ~ NA_real_)
   ) %>% 
-  mutate(mv024 = factor(mv024,levels=unique(mv024),
+  mutate(mv024 = factor(mv024,
                         labels=attr(mv024,"labels") %>% 
                           attr(.,"names") %>% str_replace(.,"\\[[a-z]+\\]\\s",""))) %>% 
   mutate(weight = mv005/(10^6),

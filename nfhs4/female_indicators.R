@@ -55,6 +55,11 @@ female_df <- female %>%
                             v445 >= 3000 ~ 1,
                             v445 < 3000 ~ 0,
                             TRUE ~ NA_real_),
+    
+    unhealthy = case_when(v445 > 6000 ~ NA_real_,
+                          v445 < 1850 | v445 >= 2500 ~ 1,
+                          v445 >= 1850 & v445 < 2500 ~ 0,
+                          TRUE ~ NA_real_),
 
     S99 = case_when(is.na(sb70) | sb70 > 498 ~ NA_real_,
                          sb70 >= 140 & sb70 <= 160 ~ 1,
@@ -117,7 +122,7 @@ india_female_cvd_indicators <- female_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107")) %>% 
+                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107","unhealthy")) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
 
 

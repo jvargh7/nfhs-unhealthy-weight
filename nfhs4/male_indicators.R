@@ -4,10 +4,11 @@
 # S108	Men (age 15 and above) Mildly elevated blood pressure (Systolic 140-159 mm of Hg and/or Diastolic 90-99 mm of Hg) (%)
 # S109	Men (age 15 and above) Moderately or severely elevated blood pressure (Systolic >= 160mm of Hg and/or Diastolic >= 100mm of Hg) (%)
 # S110	Men (age 15 and above) Elevated blood pressure (Systolic >= 140 mm of Hg and/or Diastolic >= 90 mm of Hg) or taking medicine to control blood pressure (%)
-
+require(srvyr)
 male <- readRDS(paste0(path_ecological_analysis,"/working/iamr74_clean.RDS"))
 
 male_df <- male %>% 
+  dplyr::filter(mv012 %in% c(15:49)) %>% 
   mutate(
     S15 = case_when(mv133 %in% c(9:20) | mv155 %in% c(1,2)~ 1,
                     TRUE ~ 0),
@@ -35,6 +36,11 @@ male_df <- male %>%
                       hb40 >= 3000 ~ 1,
                       hb40 < 3000 ~ 0,
                       TRUE ~ NA_real_),
+    
+    unhealthy = case_when(hb40 > 6000 ~ NA_real_,
+                          hb40 < 1850 | hb40 >= 2500 ~ 1,
+                          hb40 >= 1850 & hb40 < 2500 ~ 0,
+                          TRUE ~ NA_real_),
     
     S102 = case_when(is.na(smb70) | smb70 > 498 ~ NA_real_,
                      smb70 >= 140 & smb70 <= 160 ~ 1,
@@ -94,7 +100,7 @@ india_male_indicators <- male_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S15","S17","S87","S89","S129","S131",
+                   variables = c("S15","S17","S87","S89","S129","S131","unhealthy",
                                  # "overweight","obese",
                                  "S102","S103","S104","S108","S109","S110")) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))

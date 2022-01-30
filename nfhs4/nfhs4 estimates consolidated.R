@@ -77,7 +77,13 @@ nfhs4_region_estimates %>%
 
 # india -------
 nfhs4_india_estimates <- readRDS(paste0(path_ecological_analysis,"/working/n4 india_female_indicators.RDS")) %>% 
-  bind_cols(readRDS(paste0(path_ecological_analysis,"/working/n4 india_male_indicators.RDS")),
+  rename(unhealthy_female = unhealthy,
+         unhealthy_female_low = unhealthy_low,
+         unhealthy_female_upp = unhealthy_upp) %>% 
+  bind_cols(readRDS(paste0(path_ecological_analysis,"/working/n4 india_male_indicators.RDS")) %>% 
+              rename(unhealthy_male = unhealthy,
+                     unhealthy_male_low = unhealthy_low,
+                     unhealthy_male_upp = unhealthy_upp),
             readRDS(paste0(path_ecological_analysis,"/working/n4 india_child_indicators.RDS")),
             readRDS(paste0(path_ecological_analysis,"/working/n4 india_population_indicators hmembers.RDS")),
             readRDS(paste0(path_ecological_analysis,"/working/n4 india_household_indicators.RDS"))

@@ -65,8 +65,9 @@ female_df <- female %>%
   
   
   ) %>% 
-  mutate(v024 = factor(v024,levels=unique(v024),
-                       labels=attr(v024,"labels") %>% 
+  
+  
+  mutate(v024 = factor(v024,labels=attr(v024,"labels") %>% 
                          attr(.,"names") %>% str_replace(.,"\\[[a-z]+\\]\\s",""))) %>% 
   mutate(weight = v005/(10^6),
          state = as.character(v024))

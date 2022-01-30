@@ -4,7 +4,7 @@
 
 
 population_df <- readRDS(paste0(path_ecological_analysis,"/working/iahr52_population.RDS")) %>% 
-  mutate(hv024 = factor(hv024,levels=unique(hv024),labels=attr(hv024,"labels") %>% 
+  mutate(hv024 = factor(hv024,labels=attr(hv024,"labels") %>% 
                           attr(.,"names") %>% str_replace(.,"\\[[a-z]+\\]\\s",""))) %>% 
   mutate(weight = hmembers*hv005/(10^6),
          state = as.character(hv024)) 

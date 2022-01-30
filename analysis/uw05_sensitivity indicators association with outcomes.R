@@ -73,7 +73,7 @@ nfhs5_summary <- map2_df(.x=expand.grid(ds_ids,outcome_ids)$Var1,
                            
                          }
 ) %>% 
-  mutate(r_pval = paste0(r,", p-val",p_val)) %>% 
+  mutate(r_pval = paste0(r,", p",p_val)) %>% 
   dplyr::select(-r,-p_val) %>% 
   pivot_wider(names_from=outcome,values_from=r_pval)
 

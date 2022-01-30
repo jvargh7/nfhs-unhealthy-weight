@@ -20,7 +20,7 @@ nfhs3_state_estimates %>%
          id = str_replace(id,"(_low|_upp)","")
   ) %>% 
   pivot_wider(names_from=est,values_from=value) %>% 
-  write_csv(.,"nfhs3 estimates/state long.csv")
+  write_csv(.,"nfhs3/state long.csv")
 # region ----------
 
 nfhs3_region_estimates <- readRDS(paste0(path_ecological_analysis,"/working/n3 region_female_indicators.RDS")) %>% 
@@ -46,7 +46,7 @@ nfhs3_region_estimates %>%
          id = str_replace(id,"(_low|_upp)","")
   ) %>% 
   pivot_wider(names_from=est,values_from=value) %>% 
-  write_csv(.,"nfhs3 estimates/region long.csv")
+  write_csv(.,"nfhs3/region long.csv")
 
 # india ---------
 
@@ -67,4 +67,4 @@ nfhs3_india_estimates %>%
          id = str_replace(id,"(_low|_upp)","")
   ) %>% 
   pivot_wider(names_from=est,values_from=value) %>% 
-  write_csv(.,"nfhs3 estimates/india long.csv")
+  write_csv(.,"nfhs3/india long.csv")
