@@ -121,3 +121,48 @@ districts_scatter_change <- function(district_ids,plot_title,names = c("Underwei
   
   
 }
+
+
+states_dots_change <- function(df,state_ids = c("S86","S87"),yaxis="yes"){
+  state_relevel = df %>% 
+    dplyr::filter(id == "INDEX") %>% 
+    arrange(nfhs4s_total) %>% 
+    dplyr::select(state) %>% 
+    pull()
+  
+  fig_df <- df %>% 
+    dplyr::filter(id %in% c(state_ids)) %>%
+    dplyr::select(id,state,nfhs5s_total,nfhs4s_total) %>% 
+    pivot_longer(cols=contains("total"),names_to="var",values_to = "val") %>% 
+    mutate(state = factor(state,levels=state_relevel),
+           var = case_when(var == "nfhs5s_total" ~ "2019-20",
+                           var == "nfhs4s_total" ~ "2015-16",
+                           TRUE ~ NA_character_),
+           id = case_when(id == state_ids[1] ~ "Women",
+                          id == state_ids[2] ~ "Men",
+                          TRUE ~ NA_character_))
+  
+  fig= fig_df %>% 
+    ggplot(data=.,aes(x = state,y = val,group=interaction(id,state),col=var,shape=id)) +
+    geom_point(position = position_dodge(width=0.9),size=3) +
+    geom_path(position = position_dodge(width=0.9),col="black",linetype=2) +
+    theme_bw() + 
+    coord_flip() +
+    scale_color_manual(name="",values=c("darkblue","red")) +
+    scale_shape_discrete(name="") +
+    theme(legend.text = element_text(size=16),
+          axis.text = element_text(size = 14)) +
+    ylab("Prevalence (%)") +
+    xlab("") 
+  
+  if(yaxis=="none"){
+    fig = fig + theme(axis.text.y = element_blank())
+  }
+  
+  fig %>% 
+    return(.)
+  
+  
+  
+  
+}
