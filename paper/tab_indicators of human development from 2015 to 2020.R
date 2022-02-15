@@ -1,4 +1,7 @@
-ds_ids = c("S86","S87","S88","S89",
+
+source("paper/figaux02_appending unhealthy weight.R")
+
+ds_ids = c("S86","S87","S88","S89","unhealthy_f","unhealthy_m",
            
            "S14","S16","S20_rev",
            "S09","S08",
@@ -8,20 +11,13 @@ state_pc <- read_csv("analysis/state_pc.csv") %>%
   rename(nfhs5s_total = nfhs5s_pc1,
          nfhs4s_total = nfhs4s_pc1)
 
-india <- read_csv("nfhs4/india long.csv") %>% 
-  dplyr::filter(id %in% ds_ids) %>% 
-  mutate(india_nfhs4 = paste0(round(mean,1)," (",
-                              round(lci,1),", ",
-                              round(uci,1),")")) %>% 
-  left_join(read_csv("data/india.csv") %>% 
-              dplyr::select(id,nfhs5s_total),
-            by = "id") %>% 
-  dplyr::select(id,nfhs5s_total,india_nfhs4) %>% 
-  rename(india_nfhs5 = nfhs5s_total)
+india <- india %>% 
+  dplyr::filter(id %in% ds_ids) 
+  
 
 
 
-states <- read_csv("data/states.csv") %>% 
+summary_states <- states %>% 
   dplyr::filter(id %in% ds_ids) %>% 
   dplyr::select(id,state,nfhs5s_total,nfhs4s_total)  %>%
   bind_rows(state_pc) %>% 
@@ -35,14 +31,10 @@ states <- read_csv("data/states.csv") %>%
             )
 
 
-change_india <- read_csv("nfhs4/india long.csv") %>% 
-  dplyr::filter(id %in% ds_ids) %>% 
-  left_join(read_csv("data/india.csv") %>% 
-              dplyr::select(id,nfhs5s_total),
-            by = "id") %>% 
-  mutate(se = (mean - lci)/1.96,
-         india_change = nfhs5s_total - mean ) %>% 
-  mutate(z = (mean - nfhs5s_total)/sqrt(se^2 + se^2),
+change_india <- india %>% 
+  mutate(se = (india_nfhs4_mean - india_nfhs4_lci)/1.96,
+         india_change = india_nfhs5 - india_nfhs4_mean ) %>% 
+  mutate(z = (india_nfhs4_mean - india_nfhs5)/sqrt(se^2 + se^2),
          p_val = pnorm(abs(z),lower.tail = FALSE),
          india_change = paste0(india_change %>% round(.,1)," (",
                                (india_change - 1.96*sqrt(se^2 + se^2)) %>% round(.,1),", ",
@@ -51,9 +43,12 @@ change_india <- read_csv("nfhs4/india long.csv") %>%
          ) %>% 
   dplyr::select(id,india_change)
 
-change_states <- read_csv("nfhs4/state long.csv") %>% 
+change_states <- read_csv("nfhs4/state long.csv")  %>% 
+  mutate(id = case_when(id == "unhealthy_female" ~ "unhealthy_f",
+                        id == "unhealthy_male" ~ "unhealthy_m",
+                        TRUE ~ id)) %>% 
   dplyr::filter(id %in% ds_ids) %>% 
-  left_join(read_csv("data/states.csv") %>% 
+  left_join(states %>% 
               dplyr::select(id,v024_label,nfhs5s_total),
             by=c("id","state"="v024_label")) %>% 
   mutate(se = (mean - lci)/1.96,
@@ -68,7 +63,7 @@ change_states <- read_csv("nfhs4/state long.csv") %>%
   )
 
 
-left_join(states,
+left_join(summary_states,
           india,
           by="id") %>% 
   left_join(change_india,

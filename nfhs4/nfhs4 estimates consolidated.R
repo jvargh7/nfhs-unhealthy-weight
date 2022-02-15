@@ -27,8 +27,14 @@ nfhs4_district_estimates %>%
   write_csv(.,"nfhs4/district long.csv")
 
 # state ---------
-nfhs4_state_estimates <- readRDS(paste0(path_ecological_analysis,"/working/n4 state_female_indicators.RDS")) %>% 
-  left_join(readRDS(paste0(path_ecological_analysis,"/working/n4 state_male_indicators.RDS")),
+nfhs4_state_estimates <- readRDS(paste0(path_ecological_analysis,"/working/n4 state_female_indicators.RDS"))   %>% 
+  rename(unhealthy_female = unhealthy_f,
+         unhealthy_female_low = unhealthy_f_low,
+         unhealthy_female_upp = unhealthy_f_upp) %>% 
+  left_join(readRDS(paste0(path_ecological_analysis,"/working/n4 state_male_indicators.RDS")) %>% 
+              rename(unhealthy_male = unhealthy_m,
+                     unhealthy_male_low = unhealthy_m_low,
+                     unhealthy_male_upp = unhealthy_m_upp),
             by=c("state")) %>% 
   left_join(readRDS(paste0(path_ecological_analysis,"/working/n4 state_child_indicators.RDS")),
             by=c("state")) %>% 
@@ -50,8 +56,14 @@ nfhs4_state_estimates %>%
   write_csv(.,"nfhs4/state long.csv")
 
 # region ---------
-nfhs4_region_estimates <- readRDS(paste0(path_ecological_analysis,"/working/n4 region_female_indicators.RDS")) %>% 
-  left_join(readRDS(paste0(path_ecological_analysis,"/working/n4 region_male_indicators.RDS")),
+nfhs4_region_estimates <- readRDS(paste0(path_ecological_analysis,"/working/n4 region_female_indicators.RDS"))  %>% 
+  rename(unhealthy_female = unhealthy_f,
+         unhealthy_female_low = unhealthy_f_low,
+         unhealthy_female_upp = unhealthy_f_upp)  %>% 
+  left_join(readRDS(paste0(path_ecological_analysis,"/working/n4 region_male_indicators.RDS"))  %>% 
+              rename(unhealthy_male = unhealthy_m,
+                     unhealthy_male_low = unhealthy_m_low,
+                     unhealthy_male_upp = unhealthy_m_upp),
             by=c("state","v025"="mv025")) %>% 
   left_join(readRDS(paste0(path_ecological_analysis,"/working/n4 region_child_indicators.RDS")),
             by=c("state","v025"="hv025")) %>% 
@@ -77,13 +89,13 @@ nfhs4_region_estimates %>%
 
 # india -------
 nfhs4_india_estimates <- readRDS(paste0(path_ecological_analysis,"/working/n4 india_female_indicators.RDS")) %>% 
-  rename(unhealthy_female = unhealthy,
-         unhealthy_female_low = unhealthy_low,
-         unhealthy_female_upp = unhealthy_upp) %>% 
+  rename(unhealthy_female = unhealthy_f,
+         unhealthy_female_low = unhealthy_f_low,
+         unhealthy_female_upp = unhealthy_f_upp) %>% 
   bind_cols(readRDS(paste0(path_ecological_analysis,"/working/n4 india_male_indicators.RDS")) %>% 
-              rename(unhealthy_male = unhealthy,
-                     unhealthy_male_low = unhealthy_low,
-                     unhealthy_male_upp = unhealthy_upp),
+              rename(unhealthy_male = unhealthy_m,
+                     unhealthy_male_low = unhealthy_m_low,
+                     unhealthy_male_upp = unhealthy_m_upp),
             readRDS(paste0(path_ecological_analysis,"/working/n4 india_child_indicators.RDS")),
             readRDS(paste0(path_ecological_analysis,"/working/n4 india_population_indicators hmembers.RDS")),
             readRDS(paste0(path_ecological_analysis,"/working/n4 india_household_indicators.RDS"))

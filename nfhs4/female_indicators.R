@@ -56,7 +56,7 @@ female_df <- female %>%
                             v445 < 3000 ~ 0,
                             TRUE ~ NA_real_),
     
-    unhealthy = case_when(v445 > 6000 ~ NA_real_,
+    unhealthy_f = case_when(v445 > 6000 ~ NA_real_,
                           v445 < 1850 | v445 >= 2500 ~ 1,
                           v445 >= 1850 & v445 < 2500 ~ 0,
                           TRUE ~ NA_real_),
@@ -122,7 +122,7 @@ india_female_cvd_indicators <- female_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107","unhealthy")) %>% 
+                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107","unhealthy_f")) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
 
 
@@ -145,7 +145,7 @@ female_cvd_indicators <- female_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107","state")) %>% 
+                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107","unhealthy_f","state")) %>% 
   group_by(state) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
 
@@ -172,7 +172,7 @@ region_female_cvd_indicators <- female_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107","state","v025")) %>% 
+                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107","unhealthy_f","state","v025")) %>% 
   group_by(v025,state) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
 
@@ -200,7 +200,7 @@ d_female_cvd_indicators <- female_df %>%
                    weight = weight,
                    nest = FALSE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107","sdistri")) %>% 
+                   variables = c("S86","S88","S99","S100","S101","S105","S106","S107","unhealthy_f","sdistri")) %>% 
   group_by(sdistri) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
 

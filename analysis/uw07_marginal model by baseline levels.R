@@ -64,7 +64,7 @@ model_summary %>%
 
 source("C:/code/external/functions/imputation/contrasts_geeglm.R")
 
-bind_rows(
+contrasts_models <- bind_rows(
   contrasts_geeglm(m1,model_matrix=matrix(c(0,1,0,0,0,0,0,0,0,0,0,
                                             0,1,0,0,0,0,0,1,0,0,0,
                                             0,1,0,0,0,0,0,0,1,0,0,
@@ -87,7 +87,25 @@ bind_rows(
   mutate(coef_ci = paste0(Estimate %>% round(.,2), " (",
                           LCI %>% round(.,2),", ",
                           UCI %>% round(.,2),")"
-  )) %>% 
+  )) 
+
+(contrasts_models %>%
+  mutate(quintile = str_replace(term,"Change in ",""),
+         outcome = factor(outcome,levels=c("S86","S88","UNHEALTHY"),
+                          labels = c("Underweight","Overweight","Unhealthy weight"))) %>% 
+  ggplot(data=.,aes(x=outcome,y=Estimate,ymin=LCI,ymax=UCI,fill=quintile)) + 
+  geom_col(position = position_dodge(width=0.9)) +
+  geom_errorbar(position = position_dodge(width=0.9),width=0.2) +
+  theme_bw() +
+  xlab("") +
+  ylab("Estimated change in Prevalence (%)") +
+  scale_fill_manual(name="",values=c('#d7191c','#fdae61','#ffffbf','#abdda4','#2b83ba')) +
+  theme(legend.position = c(0.2,0.8))) %>% 
+  ggsave(.,filename = paste0(path_ecological_analysis,"/figures/model change in prevalence.png"),width=8,height=6)
+
+  
+
+contrasts_models %>% 
   dplyr::select(term,outcome,coef_ci) %>% 
   pivot_wider(names_from=outcome,values_from=coef_ci) %>% 
   dplyr::select(term, S86,S88, UNHEALTHY) %>% 

@@ -152,6 +152,7 @@ states_dots_change <- function(df,state_ids = c("S86","S87"),yaxis="yes"){
     scale_shape_discrete(name="") +
     theme(legend.text = element_text(size=16),
           axis.text = element_text(size = 14)) +
+    scale_y_continuous(limits=c(0,50)) +
     ylab("Prevalence (%)") +
     xlab("") 
   

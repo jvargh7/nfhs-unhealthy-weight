@@ -37,7 +37,7 @@ male_df <- male %>%
                       hb40 < 3000 ~ 0,
                       TRUE ~ NA_real_),
     
-    unhealthy = case_when(hb40 > 6000 ~ NA_real_,
+    unhealthy_m = case_when(hb40 > 6000 ~ NA_real_,
                           hb40 < 1850 | hb40 >= 2500 ~ 1,
                           hb40 >= 1850 & hb40 < 2500 ~ 0,
                           TRUE ~ NA_real_),
@@ -100,7 +100,7 @@ india_male_indicators <- male_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S15","S17","S87","S89","S129","S131","unhealthy",
+                   variables = c("S15","S17","S87","S89","S129","S131","unhealthy_m",
                                  # "overweight","obese",
                                  "S102","S103","S104","S108","S109","S110")) %>% 
   summarize_all(~survey_mean(.,vartype="ci",na.rm=TRUE))
@@ -112,7 +112,7 @@ male_indicators <- male_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S15","S17","S87","S89","S129","S131",
+                   variables = c("S15","S17","S87","S89","S129","S131","unhealthy_m",
                                  # "overweight","obese",
                                  "S102","S103","S104","S108","S109","S110","state")) %>% 
   group_by(state) %>% 
@@ -129,7 +129,7 @@ region_male_indicators <- male_df %>%
                    weight = weight,
                    nest = TRUE,
                    variance = "YG",pps = "brewer",
-                   variables = c("S15","S17","S87","S89","S129","S131",
+                   variables = c("S15","S17","S87","S89","S129","S131","unhealthy_m",
                                  # "overweight","obese",
                                  "S102","S103","S104","S108","S109","S110","state","mv025")) %>% 
   group_by(state,mv025) %>% 

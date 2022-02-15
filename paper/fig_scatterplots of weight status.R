@@ -1,4 +1,4 @@
-source("papers/figaux02_appending unhealthy weight.R")
+source("paper/figaux02_appending unhealthy weight.R")
 
 source("paper/uw_functions.R")
 

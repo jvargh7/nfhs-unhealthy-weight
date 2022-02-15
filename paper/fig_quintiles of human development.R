@@ -21,6 +21,10 @@
 
 
 
+
+
+
+
 library(sp)
 library(rgdal)
 library(tmap)
@@ -32,11 +36,14 @@ bound_df <- readOGR(paste0(path_shape_files,"/maps-master/States"),"Admin2")
 shape_df2 <- sp::merge(shape_df,district_wide %>% 
                          dplyr::filter(nfhs5==0) %>% 
                          mutate(hdi_quintile = factor(hdi_quintile,
-                                                      labels=c("[-5.7, 1.8]",
-                                                               "(-1.8, -0.6]",
-                                                               "(-0.6, 0.6]",
-                                                               "(0.6, 2.0]",
-                                                               "(2.0, 5.2]"))),
+                                                      labels = paste0("Q",c(1:5))
+                                                      # labels=c("[-5.7, 1.8]",
+                                                      #          "(-1.8, -0.6]",
+                                                      #          "(-0.6, 0.6]",
+                                                      #          "(0.6, 2.0]",
+                                                      #          "(2.0, 5.2]")
+                                                      
+                                                      )),
                        by.x="REGCODE",by.y="sdistri",all.x=TRUE)
 # bound_df is usable
 
