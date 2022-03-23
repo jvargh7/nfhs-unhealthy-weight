@@ -61,3 +61,23 @@ bound_df2 <- sp::merge(bound_df,states %>%
                                                   state == "NCT of Delhi" ~ "Delhi",
                                                   TRUE ~ state)),
                        by.x="ST_NM",by.y="ST_NM",all.x=TRUE)
+
+(tm_shape(shape_df2,ext=1.2) + 
+  tm_borders() + tm_fill(title= "",
+                         fill = NA,
+                         # midpoint = NA,
+                         textNA="Data not available",
+                         colorNA = "white")+ 
+    tm_text(text="REGCODE",col="red",size=0.3,remove.overlap = FALSE)+
+  tm_shape(bound_df) + tm_borders(col="black") + 
+  tm_legend(legend.position = c("right","top"),
+            legend.outside=FALSE,
+            legend.just=c("left","top"))+ 
+  
+  tm_xlab("") +
+  tm_ylab("")) %>% 
+  tmap_save(.,paste0(path_ecological_analysis,"/figures/sdistri.jpg"),height=2300/300,dpi=2000)
+
+ggplot(data=shape_df,aes(long,lat,group=group)) +
+  geom_polygon()
+

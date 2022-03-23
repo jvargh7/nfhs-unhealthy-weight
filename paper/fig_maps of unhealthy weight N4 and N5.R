@@ -1,5 +1,5 @@
 source("paper/figaux01_merging with shapefiles.R")
-source("analysis/uw_functions.R")
+source("paper/uw_functions.R")
 
 # Female State ------
 tmap_save(state_plot("nfhs4s_f_unhealthyweight","A"),paste0(path_ecological_analysis,"/figures/fig1A.png"),height=2300/300)
